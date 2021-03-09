@@ -25,12 +25,5 @@ router.post('/notes', (req, res) => {
 })
 
 // create a delete request
-router.delete('/notes', (req, res) => {
-    let allNotes = fs.readFileSync(path.join(__dirname, '../db/db/.json'), 'utf8');
-    allNotes = JSON.parse(allNotes)
-    allNotes.delete(req.body)
-    allNotes
-})
-
 
 module.exports = router;
